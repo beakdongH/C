@@ -914,6 +914,325 @@ int main(){
     return 0;
 }
 //==========================기초 100제 끝==========================
+//1167
+#include<stdio.h>
+
+int main(void){
+	int a,b,c,tmp;
+	scanf("%d %d %d",&a,&b,&c);
+	if(a>b){
+		tmp = a;
+		a=b;
+		b=tmp;
+	}
+	if(b>c){
+		tmp = b;
+		b=c;
+		c=tmp;
+	}
+	if(a>b){
+		tmp = a;
+		a=b;
+		b=tmp;
+	}
+	printf("%d",b);
+	return 0;
+}
+
+//1168
+#include<stdio.h>
+
+int main(void){
+	int ymd,gender;
+	scanf("%06d %d",&ymd,&gender);
+	ymd/=10000; //1만을 나누면 앞 두자리만 남음
+	if(gender==1||gender==2){
+		printf("%d",113-ymd);
+	}
+	else{
+		printf("%d",13-ymd);
+	}
+	return 0;
+}
+
+//1169
+#include <stdio.h>
+
+int main(){
+    int age;
+    scanf("%d",&age);
+    if(age>=14 && age<=113){
+        printf("%d ",(2012-age+1)%100);
+        printf("1");
+    }
+    else{
+        printf("%d ",(2012-age+1)%100);
+        printf("3");
+    }
+	
+    return 0;
+}
+
+//1170
+#include <stdio.h>
+
+int main(){
+    int age;
+    scanf("%d",&age);
+    if(age>=14 && age<=113){
+        printf("%d ",(2012-age+1)%100);
+        printf("1");
+    }
+    else{
+        printf("%d ",(2012-age+1)%100);
+        printf("3");
+    }
+    return 0;
+}
+
+//1171
+#include<stdio.h>
+
+int main(void){
+	int g,c,n; //grade, class, number
+	scanf("%d %d %d",&g,&c,&n);
+
+	printf("%d%02d%03d",g,c,n);
+	
+
+	return 0;
+}
+
+//1172
+int main(void){
+	int a,b,c,tmp;
+	scanf("%d %d %d",&a,&b,&c);
+	if(a>b){
+		tmp = a;
+		a=b;
+		b=tmp;
+	}
+	if(b>c){
+		tmp = b;
+		b=c;
+		c=tmp;
+	}
+	if(a>b){
+		tmp = a;
+		a=b;
+		b=tmp;
+	}
+	printf("%d %d %d",a,b,c);
+	return 0;
+}
+
+//1173
+#include<stdio.h>
+
+int main(void){
+	int h,m;
+	scanf("%d %d",&h,&m);
+	if(m<30){
+		h--;
+		if(h==-1) printf("%d %d",23,m+30);
+		else printf("%d %d",h,m+30);
+	}
+	else {
+		printf("%d %d",h,m-30);
+	}
+
+	return 0;
+}
+
+//1180
+#include<stdio.h>
+
+int main(void){
+	int n,a,b;
+	scanf("%d",&n);
+	a = n/10; //10의자리  
+    b = n%10; //1의자리 
+
+	int plus = (b*10+a)*2;
+	if(plus>100) plus-=100;
+	printf("%d\n",plus);
+	if(plus<=50) printf("GOOD");
+	else printf("OH MY GOD");
+	
+	
+	return 0;
+}
+
+//1201
+#include<stdio.h>
+
+int main(void){
+	int n;
+	scanf("%d",&n);
+	if(n<0) printf("음수");
+	else if(n>0) printf("양수");
+	else printf("0");
+	
+	return 0;
+
+//1202
+#include<stdio.h>
+
+int main(void){
+	int s;
+	scanf("%d",&s);
+	if(s>=90) printf("A");
+	else if(s>=80) printf("B");
+	else if(s>=70) printf("C");
+	else if(s>=60) printf("D");
+	else printf("F");
+	return 0;
+}
+
+//1203
+#include<stdio.h>
+
+int main(void){
+	int s;
+	scanf("%d",&s);
+	if(s<=10) printf("정상");
+	else if(s<=20) printf("과체중");
+
+	else printf("비만");
+	
+	return 0;
+}
+
+//1204
+#include<stdio.h>
+
+int main(void){
+	int n;
+	scanf("%d",&n);
+	int f=n%10;
+	int t=n/10;
+	printf("%d",n);
+	if (t==1) printf("th");
+	else if (f==1) printf("st");
+	else if (f==2) printf("nd");
+	else if (f==3) printf("rd");
+	else printf("th");
+	return 0;
+}
+
+//1205
+#include<stdio.h>
+
+int main(void){
+	int a,b,r;
+	scanf("%d %d",&a,&b);
+	int p1,m1,m2,s1,d1,d2,j1,j2;
+	p1 = a+b; 
+	m1 = a-b; m2 = b-a;
+	s1 = a*b; 
+	d1 = a/b; d2 = b/a;
+	j1=pow(a,b); j2=pow(b,a);
+	if(m1>p1) r=m1;
+	if(m2>r) r=m2;
+	if(s1>r) r=s1;
+	if(d1>r) r=d1;
+	if(d2>r) r=d2;
+	if(j1>r) r=j1;
+	if(j2>r) r=j2;
+	printf("%lf",r);
+	
+	
+	return 0;
+}
+
+//1206
+#include<stdio.h>
+
+int main(void){
+	int a,b;
+	scanf("%d %d",&a,&b);
+	if(b%a==0){
+		printf("%d*%d=%d",a,b/a,b);
+	}
+	else if(a%b==0){
+		printf("%d*%d=%d",b,a/b,a);
+	}
+	else{
+		printf("none");
+	}
+	
+	return 0;
+}
+
+//1207
+#include<stdio.h>
+
+int main(void){
+	int a,b,c,d;
+	scanf("%d %d %d %d",&a,&b,&c,&d);
+	int sum = a+b+c+d;
+	if(sum==0) printf("모");
+	else if(sum==1) printf("도");
+	else if(sum==2) printf("개");
+	else if(sum==3) printf("걸");
+	else if(sum==4) printf("윷");
+	
+	
+	
+	return 0;
+}
+
+//1210
+#include<stdio.h>
+
+int main(void){
+	int a,b,a1,b1;
+	scanf("%d %d",&a,&b);
+	if(a==1) a1=400;
+	else if (a==2) a1=340;
+	else if (a==3) a1=170;
+	else if (a==4) a1=100;
+	else if (a==5) a1=70;
+	
+	if(b==1) b1=400;
+	else if (b==2) b1=340;
+	else if (b==3) b1=170;
+	else if (b==4) b1=100;
+	else if (b==5) b1=70;
+
+	if(a1+b1>500) printf("angry");
+	else printf("no angry");
+	
+	return 0;
+}
+
+//1212
+#include<stdio.h>
+
+int main(void){
+	int a,b,c,tmp;
+	scanf("%d %d %d",&a,&b,&c);
+	if(a>=b) {
+		tmp=b; 
+		b=a; 
+		a=tmp;
+	}
+	if(b>=c) {
+		tmp=c; 
+		c=b;
+		b=tmp;
+	}
+	if(a>=b) {
+		tmp=b; 
+		b=a; 
+		a=tmp;
+	}
+	printf("%d %d %d",a,b,c);
+	if(c<a+b) printf("yes");
+	else printf("no");
+	return 0;
+}
+
 
 
 
