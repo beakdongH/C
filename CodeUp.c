@@ -1236,8 +1236,7 @@ int main(void){
 //1214
 #include <stdio.h>
 
-int main (void)
-{
+int main (void){
     
     int a, b;
     scanf("%d %d",&a,&b);
@@ -1253,5 +1252,104 @@ int main (void)
     return 0;
 }
 
+//1216
+#include<stdio.h>
 
+int main(void){
+	
+	int a,b,c,d;
+	scanf("%d %d %d",&a,&b,&c);
+	d=a+c;
+	if(d>b) printf("do not advertise");
+	else if(d<b) printf("advertise");
+	else printf("does not matter");
+		
+   	 return 0;
+}
+
+//1218
+#include<stdio.h>
+
+int main(void){
+	int a,b,c;
+	scanf("%d %d %d",&a,&b,&c);
+	if (a+b>c && a+c>b && b+c>a) printf("삼각형아님")
+	else if(a==b && b==c) printf("정삼각형");
+	else if(a==b || b==c || b==c) printf("이등변삼각형");
+	else if(a*a + b*b == c*c) printf("직각삼각형");
+	else printf("삼각형");
+		
+	return 0;
+}
+
+//1222
+#include <stdio.h>
+
+int main(){
+	int a,class1,class2,time;
+	scanf("%d %d %d",&time,&class1,&class2);
+	for(a=time; a<90; a+=5){
+		class1++;
+	}
+	if(class1>class2) printf("win");
+	else if(class1<class2) printf("lose");
+	else if(class1==class2) printf("same");
+        
+    	return 0;
+}
+
+//1224
+#include <stdio.h>
+ 
+int main (void){
+	float a,b,c,d;
+	scanf("%f %f %f %f",&a,&b,&c,&d);
+	if(a/b>c/d) printf(">");
+	else if(a/b==c/d) printf("=");
+	else printf("<");
+    
+    	return 0;
+}
+
+//1226
+#include<stdio.h>
+
+int main(void){
+	int a,b,c,d,e,f,g;
+	scanf("%d %d %d %d %d %d %d",&a,&b,&c,&d,&e,&f,&g);
+	int lotto1,lotto2,lotto3,lotto4,lotto5,lotto6;
+	scanf("%d %d %d %d %d %d",&lotto1,&lotto2,&lotto3,&lotto4,&lotto5,&lotto6);
+	int score=0;
+	if(a==lotto1 || b==lotto1 || c==lotto1 || d==lotto1 || e==lotto1 || f==lotto1) score++;
+	if(a==lotto2 || b==lotto2 || c==lotto2 || d==lotto2 || e==lotto2 || f==lotto2) score++;
+	if(a==lotto3 || b==lotto3 || c==lotto3 || d==lotto3 || e==lotto3 || f==lotto3) score++;
+	if(a==lotto4 || b==lotto4 || c==lotto4 || d==lotto4 || e==lotto4 || f==lotto4) score++;
+	if(a==lotto5 || b==lotto5 || c==lotto5 || d==lotto5 || e==lotto5 || f==lotto5) score++;
+	if(a==lotto6 || b==lotto6 || c==lotto6 || d==lotto6 || e==lotto6 || f==lotto6) score++;
+	
+	if(score==6) printf("1"); 
+	else if((g==lotto1 || g==lotto2 || g==lotto3 || g==lotto4 || g==lotto5 || g==lotto6) && score==5) printf("2");
+	else if(score==5) printf("3");
+	else if(score==4) printf("4"); 
+	else if(score==3) printf("5");
+	else printf("0");
+	
+	return 0;
+}
+
+//1228
+#include<stdio.h>
+
+int main(void){
+	double a,b;
+	scanf("%lf%lf",&a,&b);
+	
+	double weight=(b-((a-100)*0.9))*100/((a-100)*0.9);
+	
+	if(weight<=10)printf("정상");
+	else if(weight<=20) printf("과체중");
+	else printf("비만");
+	
+	return 0;
+}
 
