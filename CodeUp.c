@@ -1403,3 +1403,46 @@ int main(void){
 	
 	return 0;
 }
+
+//1231
+#include <stdio.h>
+ 
+ 
+int main (void)
+{
+    int a,b;
+    char cal;
+    
+    scanf("%d %c %d",&a,&cal,&b);
+	   
+    if(cal == '+') printf("%d",a + b);
+    else if(cal == '-') printf("%d",a-b);
+    else if(cal == '*') printf("%d",a*b);
+    else printf("%.02f",(float)a/(float)b);
+    
+    return 0;
+}
+
+//1251
+#include<stdio.h>
+
+int main(void){
+    for(int i=1;i<=100;i++){
+        print("%d ",i);    
+    }
+	
+    return 0;
+}
+
+//1252
+#include<stdio.h>
+
+int main(void){
+    int a;
+    scanf("%d",&a);
+    for(int i=1; i<=a; i++){
+        printf("%d ",i);
+    }
+  
+    return 0;
+}
