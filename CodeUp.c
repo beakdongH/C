@@ -1446,3 +1446,82 @@ int main(void){
   
     return 0;
 }
+
+//1352
+# include <stdio.h>
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    for(int i = 1; i<=n; i++){
+    	for(int j = 1; j<=n; j++){
+    		printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+ 
+//1353
+#include<stdio.h>
+
+int main(void){
+    int a;
+    scanf("%d",&a);
+    for(int i =1; i<=a;i++){
+        for(int j=1;j<=i;j++) printf("*");
+        printf("\n");
+    }       
+    return 0;
+}
+
+//1354
+#include<stdio.h>
+ 
+int main(){
+    int a;
+    scanf("%d", &a);
+    
+    for(int i = 1; i<= a; i++){
+        for(int j = i; j <=a; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+ 
+   return 0;
+}
+
+//1355
+#include <stdio.h>
+
+int main(){
+    int num;
+    scanf("%d", &num);
+    
+    for(int i = 1; i <= num; i++){
+        for(int k = 1; k < i; k++){
+            printf(" ");
+        }
+        for(int j = i; j <= num; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+//1407
+#include<stdio.h>
+ 
+int main(){
+    char a[101];
+    gets(a);
+    for (int i = 0; a[i] != '\0'; i++) {
+        if (a[i] != ' '){
+            printf("%c",a[i]);
+        }
+    }
+    return 0;
+  
+}
