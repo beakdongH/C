@@ -1616,3 +1616,31 @@ int main(){
 	}
 	return 0;
 }
+
+//1526
+#include <stdio.h>
+
+void f(){
+    printf("hello");
+}
+
+int main()
+{
+    f();
+    return 0;
+}
+
+//1530
+#include <stdio.h>
+
+char f()
+{
+  return 'A'; 
+    
+}
+int main()
+{
+    printf("%c", f() );
+    return 0;
+}
+
