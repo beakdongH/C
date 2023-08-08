@@ -1511,6 +1511,62 @@ int main(){
     return 0;
 }
 
+//1402
+#include<stdio.h>
+ 
+ 
+int main(){
+    int num;
+    int buf[1000] = {};
+    scanf("%d",&num);
+    
+    for(int i =0; i<num; i++){
+        scanf("%d", &buf[i]);
+    }
+    for(int j = num-1; j >= 0; j--){
+        printf("%d ",buf[j]);
+    }
+
+    return 0;
+}
+
+//1403
+#include<stdio.h>
+ 
+int main(){
+    int num;
+    int buf[100] = {};
+    scanf("%d",&num);
+    
+    for(int i =0; i<num; i++){
+        scanf("%d", &buf[i]);
+    }
+    for(int k = 0; k < 2; k++){
+        for(int j = 0; j <num; j++){
+            printf("%d\n",buf[j]);
+        }
+    }
+    return 0;
+}
+
+//1405
+#include <stdio.h>
+
+int main(){
+    int i,j,a,arr[1000]={0};
+    scanf("%d",&a);
+    for(i=0;i<a;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<a;i++){
+        for(j=i;j<a+i;j++){
+            printf("%d ",arr[j%(a)]);
+        }
+        printf("\n");
+    }
+	return 0;
+}
+
 //1407
 #include<stdio.h>
  
@@ -1524,4 +1580,39 @@ int main(){
     }
     return 0;
   
+}
+
+//1410
+#include <stdio.h>
+
+int main(){
+    char s[100001];
+    int i,a=0,b=0;
+    scanf("%s",s);
+    for(i=0;s[i]!='\0';i++){
+        if(s[i]=='(')
+            a++;
+        if(s[i]==')')
+            b++;
+    }
+    printf("%d %d",a,b);
+	return 0;
+}
+
+//1411
+#include <stdio.h>
+
+int main(){
+	int n, m, i;
+	scanf("%d", &n);
+	int arr[51];
+	
+	for(i=1; i<n; i++){
+		scanf("%d", &m);
+		arr[m]=1;
+	}
+	for(i=1; i<=n; i++){
+		if(arr[i]!=1) printf("%d", i);
+	}
+	return 0;
 }
