@@ -2,8 +2,7 @@
 //1001
 #include <stdio.h>
 
-int main()
-{
+int main(){
   printf("Hello");
   return 0;
 }
