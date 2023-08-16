@@ -1721,3 +1721,54 @@ int main()
     return 0;
 }
 
+//1528
+#include<stdio.h>
+
+int main(void){
+	double a,b;
+	scanf("%lf%lf",&a,&b);
+	
+	double weight=(b-((a-100)*0.9))*100/((a-100)*0.9);
+	
+	if(weight<=10)printf("정상");
+	else if(weight<=20) printf("과체중");
+	else printf("비만");
+	
+	
+	return 0;
+}
+
+//1529
+#include<stdio.h>
+
+int main(void){
+    double h, w, avg;
+    scanf("%lf %lf", &h, &w);
+    if(h<150) avg = h-100;
+    else if(h<160) avg = (h-150)/2+50;
+    else avg = (h-100)*0.9;
+    double per = (w-avg)*100/avg;
+    
+    if (per<=10) printf("정상");
+    else if (per<=20) printf("과체중");
+    else printf("비만");
+    
+    return 0;
+}
+
+//1530
+#include<stdio.h>
+
+int main(void){
+	int a,b,c;
+	scanf("%d %d %d",&a,&b,&c);
+	if (a<=170) printf("CRASH %d",a);
+	else if (b<=170) printf("CRASH %d",b);
+	else if (c<=170) printf("CRASH %d",c);
+	else printf("PASS");
+	
+	
+	return 0;
+}
+
+
