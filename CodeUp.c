@@ -1771,4 +1771,40 @@ int main(void){
 	return 0;
 }
 
+//1538
+#include <stdio.h>
+
+int n;
+void f(int n){
+  printf("%s\n", n%2==0?"even":"odd");
+}
+
+int main(){
+  scanf("%d", &n);
+  f(n);
+  return 0;
+}
+
+//1901
+#include <stdio.h>
+
+void f(int n){
+    
+    if(n==0) return;
+    
+    else{	
+    	f(n-1);					//먼저 재귀함수를 실행시킴으로써 f(n)번이 끝나기 전에 f(n-1)를 실행	 
+		printf("%d\n",n);		//그러며 프린트를 뒤로 미룸, 그후 f(0)까지 가서 끝이 나게 되면 
+								//f(1),f(2)...f(n)까지 printf를 다시 출력한다 
+	}
+}
+
+
+int main(){
+    int n;
+    scanf("%d",&n);
+	f(n);
+	return 0;
+}
+
 
