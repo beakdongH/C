@@ -1,21 +1,17 @@
-include<stdio.h>
- 
-int main(){
-    
-    int a,b,temp;
-    scanf("%d %d", &a, &b);
-    
-    if(a > b){
-        temp = a;
-        a = b;
-        b = temp;
+#include<stdio.h>
+
+int main(void){
+    int a,b,tmp;
+    scanf("%d %d",&a,&b);
+    if(a>b){
+        tmp = a;
+        a=b;
+        b=tmp;
     }
- 
-    for(int i = a; i <= b; i++){
+    for(int i=a;i<=b;i++){
         printf("%d ",i);
     }
     
     
     return 0;
 }
- 
